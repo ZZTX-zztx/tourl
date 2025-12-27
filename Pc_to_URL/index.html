@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="icon" href="icons/tag.png" type="image/png" sizes="32x32">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片转URL工具</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>图片转URL工具</h1>
+        
+        <!-- 上传区域（含图标） -->
+        <div class="upload-area" id="upload-area">
+            <div class="upload-icon"></div>
+            <div class="upload-text">点击或拖拽图片到此处上传</div>
+            <div class="upload-hint">支持 JPG、PNG、GIF、WebP 等格式</div>
+            <input type="file" id="file-input" accept="image/*">
+        </div>
+        
+        <!-- 图片预览 -->
+        <div class="preview-section" id="preview-section">
+            <img src="" alt="图片预览" class="preview-img" id="preview-img">
+        </div>
+        
+        <!-- URL输出区域（含标签图标） -->
+        <div class="url-section" id="url-section">
+            <label class="url-label">
+                <div class="tag-icon"></div>
+                图片Base64 URL：
+            </label>
+            <textarea id="url-output" readonly></textarea>
+        </div>
+        
+        <!-- 按钮组 -->
+        <div class="btn-group">
+            <button id="copy-btn">复制URL</button>
+            <button id="reset-btn">重置</button>
+        </div>
+    </div>
+    
+    <!-- 提示框 -->
+    <div class="toast" id="toast">复制成功！</div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
